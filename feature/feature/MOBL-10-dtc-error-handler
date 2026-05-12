@@ -1,0 +1,9 @@
+DTC_CODES = {
+    "P0100": "Mass Air Flow Circuit Malfunction",
+    "P0300": "Random/Multiple Cylinder Misfire",
+    "P0420": "Catalyst System Efficiency Below Threshold",
+    "U0100": "Lost Communication with ECM/PCM",
+}
+
+def lookup_dtc(code: str) -> str:
+    return DTC_CODES.get(code, f"Unknown DTC: {code}")
